@@ -20,9 +20,17 @@ public class PetsEntity {
     private String city;
     private String race;
 
-    private String averageAge;
-    private String averageWeight;
-    private String averageHeight;
+    //private String averageAge;
+
+    private Integer ageMin;
+    private Integer ageMax;
+
+
+    private Double weightMin;
+    private Double weightMax;
+
+    private Double HeightMin;
+    private Double HeightMax;
 
     private String raceGroup;
     private String temper;

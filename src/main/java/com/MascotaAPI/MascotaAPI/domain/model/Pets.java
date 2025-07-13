@@ -9,9 +9,19 @@ public class Pets {
     private String city;
     private String race;
 
-    private String averageAge;
-    private String averageWeight;
-    private String averageHeight;
+    //private String averageAge;
+    private Integer ageMin;
+    private Integer ageMax;
+
+    //private String averageWeight;
+
+    private Double weightMin;
+    private Double weightMax;
+
+   // private String averageHeight;
+
+    private Double HeightMin;
+    private Double HeightMax;
 
     private String raceGroup;
     private String temper;
@@ -57,28 +67,62 @@ public class Pets {
         this.race = race;
     }
 
-    public String getAverageAge() {
-        return averageAge;
+//    public String getAverageAge() {
+//        return averageAge;
+//    }
+//
+//    public void setAverageAge(String averageAge) {
+//        this.averageAge = averageAge;
+//    }
+
+
+    public Integer getAgeMin() {
+        return ageMin;
     }
 
-    public void setAverageAge(String averageAge) {
-        this.averageAge = averageAge;
+    public void setAgeMin(Integer ageMin) {
+        this.ageMin = ageMin;
     }
 
-    public String getAverageWeight() {
-        return averageWeight;
+    public Integer getAgeMax() {
+        return ageMax;
     }
 
-    public void setAverageWeight(String averageWeight) {
-        this.averageWeight = averageWeight;
+    public void setAgeMax(Integer ageMax) {
+        this.ageMax = ageMax;
     }
 
-    public String getAverageHeight() {
-        return averageHeight;
+    public Double getWeightMin() {
+        return weightMin;
     }
 
-    public void setAverageHeight(String averageHeight) {
-        this.averageHeight = averageHeight;
+    public void setWeightMin(Double weightMin) {
+        this.weightMin = weightMin;
+    }
+
+    public Double getWeightMax() {
+        return weightMax;
+    }
+
+    public void setWeightMax(Double weightMax) {
+        this.weightMax = weightMax;
+    }
+
+
+    public Double getHeightMin() {
+        return HeightMin;
+    }
+
+    public void setHeightMin(Double heightMin) {
+        HeightMin = heightMin;
+    }
+
+    public Double getHeightMax() {
+        return HeightMax;
+    }
+
+    public void setHeightMax(Double heightMax) {
+        HeightMax = heightMax;
     }
 
     public String getRaceGroup() {

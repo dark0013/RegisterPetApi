@@ -18,9 +18,19 @@ public class PetsDto {
     private String city;
     private String race;
 
-    private String averageAge;
-    private String averageWeight;
-    private String averageHeight;
+    //private String averageAge;
+   //private String averageWeight;
+
+    private Integer ageMin;
+    private Integer ageMax;
+
+    private Double weightMin;
+    private Double weightMax;
+
+    //private String averageHeight;
+
+    private Double HeightMin;
+    private Double HeightMax;
 
     private String raceGroup;
     private String temper;
