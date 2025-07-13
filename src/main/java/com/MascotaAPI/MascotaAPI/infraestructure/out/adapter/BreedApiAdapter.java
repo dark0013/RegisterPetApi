@@ -38,11 +38,19 @@ public class BreedApiAdapter implements IBreedApiPort {
         return Arrays.asList(response.getBody());
     }
 
-    @Override
+    /*@Override
     public Optional<BreedInfo> fetchBreedById(Long id) {
         return fetchAllBreeds()
                 .stream()
                 .filter(breed -> breed.getId().equals(id))
+                .findFirst();
+    }*/
+
+    @Override
+    public Optional<BreedInfo> fetchBreedById(String race) {
+        return fetchAllBreeds()
+                .stream()
+                .filter(breed -> breed.getName().trim().equalsIgnoreCase(race.trim()))
                 .findFirst();
     }
 }

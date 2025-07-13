@@ -24,8 +24,8 @@ public class BreedController {
         return breedService.getAllBreeds();
     }
 
-    @GetMapping("/{id}")
-    public BreedInfo getBreedById(@PathVariable Long id) {
-        return breedService.getBreedById(id).orElseThrow(() -> new RuntimeException("Raza no encontrada"));
+    @GetMapping("/{race}")
+    public BreedInfo getBreedById(@PathVariable String race) {
+        return breedService.getBreedById(race).orElseThrow(() -> new RuntimeException("Raza no encontrada"));
     }
 }

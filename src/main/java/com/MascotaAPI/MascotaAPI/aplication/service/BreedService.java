@@ -17,7 +17,7 @@ public class BreedService {
         return breedApiPort.fetchAllBreeds();
     }
 
-    public Optional<BreedInfo> getBreedById(Long id) {
-        return breedApiPort.fetchBreedById(id);
+    public Optional<BreedInfo> getBreedById(String race) {
+        return breedApiPort.fetchBreedById(race);
     }
 }

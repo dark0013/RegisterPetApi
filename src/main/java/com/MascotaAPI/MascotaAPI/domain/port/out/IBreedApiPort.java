@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface IBreedApiPort {
     List<BreedInfo> fetchAllBreeds();
-    Optional<BreedInfo> fetchBreedById(Long id);
+    Optional<BreedInfo> fetchBreedById(String race);
 }
