@@ -23,6 +23,11 @@ public class PetsService implements IPetsServicePort {
         Optional<BreedInfo> breedInfo = breedService.getBreedById(pets.getRace());
         if(breedInfo.isPresent()){
             pets.setAverageAge(breedInfo.get().getLife_span());
+            pets.setAverageWeight(breedInfo.get().getWeight().getMetric());
+            pets.setAverageHeight(breedInfo.get().getHeight().getMetric());
+            pets.setRaceGroup(breedInfo.get().getBreed_group());
+            pets.setTemper(breedInfo.get().getTemperament());
+            pets.setPurposeRace(breedInfo.get().getBred_for());
         }else{
             System.out.print("no se encontro la raza");
         }

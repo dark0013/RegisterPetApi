@@ -5,6 +5,7 @@ public class BreedInfo {
     private String name;
     private String bred_for;
     private String life_span;
+    private String breed_group;
     private String temperament;
     private String origin;
     private String reference_image_id;
@@ -42,6 +43,14 @@ public class BreedInfo {
 
     public void setLife_span(String life_span) {
         this.life_span = life_span;
+    }
+
+    public String getBreed_group() {
+        return breed_group;
+    }
+
+    public void setBreed_group(String breed_group) {
+        this.breed_group = breed_group;
     }
 
     public String getTemperament() {
