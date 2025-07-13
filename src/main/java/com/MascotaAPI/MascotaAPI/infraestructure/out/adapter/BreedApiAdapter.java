@@ -1,8 +1,7 @@
 package com.MascotaAPI.MascotaAPI.infraestructure.out.adapter;
 
 import com.MascotaAPI.MascotaAPI.domain.model.BreedInfo;
-import com.MascotaAPI.MascotaAPI.domain.port.out.IBreedApiPort;
-import org.springframework.stereotype.Repository;
+import com.MascotaAPI.MascotaAPI.domain.port.out.IBreedApiRepositoryPort;
 import org.springframework.web.client.RestTemplate;
 
 import org.springframework.http.*;
@@ -12,7 +11,7 @@ import java.util.Optional;
 import java.util.Arrays;
 import java.util.List;
 @Component
-public class BreedApiAdapter implements IBreedApiPort {
+public class BreedApiAdapter implements IBreedApiRepositoryPort {
     private final String API_URL = "https://api.thedogapi.com/v1/breeds";
     private final String API_KEY = "live_IxhUo52LJYnNrnHmZHdtk81ucoigFxKXYeKgxYRAq38EZe41PR4YJfKFBep7g5AA";
 
