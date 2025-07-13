@@ -3,25 +3,22 @@ package com.MascotaAPI.MascotaAPI.domain.model;
 public class Pets {
     private Long idPets;
     private String name;
-    private String age;
+    private Integer  age;
 
     private String address;
     private String city;
     private String race;
 
-    //private String averageAge;
+
+
     private Integer ageMin;
     private Integer ageMax;
-
-    //private String averageWeight;
 
     private Double weightMin;
     private Double weightMax;
 
-   // private String averageHeight;
-
-    private Double HeightMin;
-    private Double HeightMax;
+    private Double heightMin;
+    private Double heightMax;
 
     private String raceGroup;
     private String temper;
@@ -43,12 +40,12 @@ public class Pets {
         this.name = name;
     }
 
-    public String getCity() {
-        return city;
+    public Integer  getAge() {
+        return age;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setAge(Integer  age) {
+        this.age = age;
     }
 
     public String getAddress() {
@@ -59,6 +56,14 @@ public class Pets {
         this.address = address;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
     public String getRace() {
         return race;
     }
@@ -66,15 +71,6 @@ public class Pets {
     public void setRace(String race) {
         this.race = race;
     }
-
-//    public String getAverageAge() {
-//        return averageAge;
-//    }
-//
-//    public void setAverageAge(String averageAge) {
-//        this.averageAge = averageAge;
-//    }
-
 
     public Integer getAgeMin() {
         return ageMin;
@@ -108,21 +104,20 @@ public class Pets {
         this.weightMax = weightMax;
     }
 
-
     public Double getHeightMin() {
-        return HeightMin;
+        return heightMin;
     }
 
     public void setHeightMin(Double heightMin) {
-        HeightMin = heightMin;
+        this.heightMin = heightMin;
     }
 
     public Double getHeightMax() {
-        return HeightMax;
+        return heightMax;
     }
 
     public void setHeightMax(Double heightMax) {
-        HeightMax = heightMax;
+        this.heightMax = heightMax;
     }
 
     public String getRaceGroup() {
@@ -147,13 +142,5 @@ public class Pets {
 
     public void setPurposeRace(String purposeRace) {
         this.purposeRace = purposeRace;
-    }
-
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
     }
 }

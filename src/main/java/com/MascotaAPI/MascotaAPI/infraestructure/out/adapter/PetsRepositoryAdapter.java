@@ -7,6 +7,9 @@ import com.MascotaAPI.MascotaAPI.infraestructure.out.mapper.IPetsRepositoryMappe
 import com.MascotaAPI.MascotaAPI.infraestructure.out.repository.IPetsRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Repository
 public class PetsRepositoryAdapter implements IPetsRepositoryPort {
     private final IPetsRepository petsRepository;
@@ -22,4 +25,25 @@ public class PetsRepositoryAdapter implements IPetsRepositoryPort {
         PetsEntity pet = petsRepository.save(petsRepositoryMapper.toEntity(pets));
         return petsRepositoryMapper.toDomain(pet);
     }
+
+
+    @Override
+    public List<Pets> findByFilters(String raceGroup, String race,
+                                   Integer ageMin, Integer ageMax,
+                                   Double weightMin, Double weightMax,
+                                   Double heightMin, Double heightMax,
+                                   String temper) {
+
+        List<PetsEntity> entities = petsRepository.findByFilters(
+                raceGroup, race, ageMin, ageMax,
+                weightMin, weightMax, heightMin, heightMax, temper
+        );
+
+        return entities.stream()
+                .map(petsRepositoryMapper::toDomain)
+                .collect(Collectors.toList());
+    }
+
+
+
 }

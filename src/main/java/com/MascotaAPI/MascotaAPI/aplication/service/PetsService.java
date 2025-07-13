@@ -6,6 +6,7 @@ import com.MascotaAPI.MascotaAPI.domain.port.in.IBreedApiServicePort;
 import com.MascotaAPI.MascotaAPI.domain.port.in.IPetsServicePort;
 import com.MascotaAPI.MascotaAPI.domain.port.out.IPetsRepositoryPort;
 
+import java.util.List;
 import java.util.Optional;
 
 import static java.lang.Double.parseDouble;
@@ -46,6 +47,8 @@ public class PetsService implements IPetsServicePort {
 
         return petsRport.savePets(pets);
     }
+
+
 
     private Double[] parseRange(String metric) {
         if (metric == null || metric.isBlank()) {
@@ -99,6 +102,14 @@ public class PetsService implements IPetsServicePort {
         return new Integer[]{null, null};
     }
 
-
+    @Override
+    public List<Pets> getPetsByFilters(String raceGroup, String race,
+                                      Integer ageMin, Integer ageMax,
+                                      Double weightMin, Double weightMax,
+                                      Double heightMin, Double heightMax,
+                                      String temper) {
+        return petsRport.findByFilters(raceGroup, race, ageMin, ageMax,
+                weightMin, weightMax, heightMin, heightMax, temper);
+    }
 
 }
