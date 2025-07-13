@@ -1,0 +1,11 @@
+package com.MascotaAPI.MascotaAPI.domain.port.out;
+
+import com.MascotaAPI.MascotaAPI.domain.model.BreedInfo;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface IBreedApiPort {
+    List<BreedInfo> fetchAllBreeds();
+    Optional<BreedInfo> fetchBreedById(Long id);
+}
