@@ -50,7 +50,7 @@ Permite consultar mascotas registradas usando filtros por:
 - **Persistencia con PostgreSQL y Spring Data JPA**
 - **Consumo de API externa con `RestTemplate`**
 - **Consultas con filtros usando JPQL**
-- **Manejo de logs con SLF4J (`@Slf4j`)**
+- **Manejo de logs con SLF4J utilizando LoggerFactory**
 - **Pruebas unitarias con JUnit 5 y Mockito**
 - **Contenerización con Docker y Docker Compose**
 
