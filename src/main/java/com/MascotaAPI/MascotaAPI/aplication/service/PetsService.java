@@ -5,14 +5,17 @@ import com.MascotaAPI.MascotaAPI.domain.model.Pets;
 import com.MascotaAPI.MascotaAPI.domain.port.in.IBreedApiServicePort;
 import com.MascotaAPI.MascotaAPI.domain.port.in.IPetsServicePort;
 import com.MascotaAPI.MascotaAPI.domain.port.out.IPetsRepositoryPort;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.Optional;
 
-import static java.lang.Double.parseDouble;
+
 
 public class PetsService implements IPetsServicePort {
 
+    private static final Logger log = LoggerFactory.getLogger(PetsService.class);
     private final IPetsRepositoryPort petsRport;
     private final IBreedApiServicePort breedService;
 
@@ -41,8 +44,9 @@ public class PetsService implements IPetsServicePort {
             pets.setRaceGroup(breedInfo.get().getBreed_group());
             pets.setTemper(breedInfo.get().getTemperament());
             pets.setPurposeRace(breedInfo.get().getBred_for());
+            log.info("Datos de raza agregados para la mascota: {}", pets.getName());
         }else{
-            System.out.print("no se encontro la raza");
+            log.info("Mensaje de log");
         }
 
         return petsRport.savePets(pets);
