@@ -38,7 +38,7 @@ Permite consultar mascotas registradas usando filtros por:
 - Rango de peso
 - Rango de altura
 
-> Los filtros fueron implementados usando **consultas JPQL personalizadas**, no `Specification`.
+> Los filtros fueron implementados usando **consultas JPQL personalizadas**.
 
 ---
 
@@ -58,9 +58,7 @@ Permite consultar mascotas registradas usando filtros por:
 
 ## 🧪 Cobertura de código
 
-![coverage](./covertura de codigo.png)
-
-> Cobertura generada usando **JaCoCo** y reportada como parte del proceso de pruebas.
+![coverage](./covertura_de_codigo.png)
 
 ---
 
