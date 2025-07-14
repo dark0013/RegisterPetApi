@@ -58,7 +58,7 @@ Permite consultar mascotas registradas usando filtros por:
 
 ## 🧪 Cobertura de código
 
-![coverage](./docs/code-coverage-report.png)
+![coverage](./covertura de codigo.png)
 
 > Cobertura generada usando **JaCoCo** y reportada como parte del proceso de pruebas.
 
@@ -78,10 +78,10 @@ Permite consultar mascotas registradas usando filtros por:
 | race           | VARCHAR          | Raza ingresada                                      |
 | age_min        | INTEGER          | Edad mínima de vida de la raza (desde API externa)  |
 | age_max        | INTEGER          | Edad máxima de vida de la raza (desde API externa)  |
-| weight_min     | DOUBLE PRECISION | Peso mínimo de la raza (desde API externa)          |
-| weight_max     | DOUBLE PRECISION | Peso máximo de la raza (desde API externa)          |
-| height_min     | DOUBLE PRECISION | Altura mínima de la raza (desde API externa)        |
-| height_max     | DOUBLE PRECISION | Altura máxima de la raza (desde API externa)        |
+| weight_min     | DOUBLE  | Peso mínimo de la raza (desde API externa)          |
+| weight_max     | DOUBLE  | Peso máximo de la raza (desde API externa)          |
+| height_min     | DOUBLE  | Altura mínima de la raza (desde API externa)        |
+| height_max     | DOUBLE  | Altura máxima de la raza (desde API externa)        |
 | race_group     | VARCHAR          | Grupo de raza (desde API externa)                   |
 | temper         | VARCHAR          | Temperamento de la raza (desde API externa)         |
 | purpose_race   | VARCHAR          | Propósito de la raza (bred_for desde API externa)   |

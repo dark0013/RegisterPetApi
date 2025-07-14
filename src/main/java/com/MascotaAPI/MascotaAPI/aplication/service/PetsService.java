@@ -67,7 +67,7 @@ public class PetsService implements IPetsServicePort {
                 return new Double[]{min, max};
             } else {
                 double value = Double.parseDouble(metric.trim());
-                return new Double[]{value, value}; // mismo valor como min y max
+                return new Double[]{value, value};
             }
         } catch (NumberFormatException e) {
             // puedes registrar el error aquí si necesitas
@@ -80,8 +80,8 @@ public class PetsService implements IPetsServicePort {
             return new Integer[]{null, null};
         }
 
-        // Quitar palabras no numéricas (como "years", "kg", "cm", etc.)
-        String cleaned = raw.replaceAll("[^0-9\\-\\.]", ""); // Deja solo números, guiones y puntos
+
+        String cleaned = raw.replaceAll("[^0-9\\-\\.]", "");
 
         try {
             if (cleaned.contains("-")) {
@@ -89,12 +89,11 @@ public class PetsService implements IPetsServicePort {
                 if (parts.length == 2) {
                     double minDouble = Double.parseDouble(parts[0].trim());
                     double maxDouble = Double.parseDouble(parts[1].trim());
-                    Integer min = (int) minDouble; // Truncar a entero
+                    Integer min = (int) minDouble;
                     Integer max = (int) maxDouble;
                     return new Integer[]{min, max};
                 }
             } else {
-                // Si no tiene guion, se asume un solo valor
                 double valueDouble = Double.parseDouble(cleaned.trim());
                 Integer value = (int) valueDouble;
                 return new Integer[]{value, value};
