@@ -15,24 +15,8 @@ services:
     networks:
       - petnet
 
-  app:
-    build: .
-    container_name: mascota_api_app
-    ports:
-      - "9595:9595"
-    depends_on:
-      - postgres
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/PET_REGISTER_DB
-      SPRING_DATASOURCE_USERNAME: ALAINC00
-      SPRING_DATASOURCE_PASSWORD: ROOT1234
-    networks:
-      - petnet
-
-
 volumes:
   postgres_data:
 
 networks:
   petnet:
-
