@@ -96,6 +96,12 @@ La API externa es consultada usando **`RestTemplate`**, dentro del adaptador cor
 
 ---
 
+### 📬 Colección de Postman
+
+Puedes importar y probar las APIs con la siguiente colección de Postman:
+
+[📥 Descargar colección Postman](./PetsApi.postman_collection.json)
+
 ## 🚀 Cómo levantar el proyecto
 
 ### 1. Requisitos
@@ -112,3 +118,4 @@ La API externa es consultada usando **`RestTemplate`**, dentro del adaptador cor
 docker-compose up -d
 
 docker run -d --name mascota_api_app -p 9595:9595 -e SPRING_DATASOURCE_URL=jdbc:postgresql://psql_petapi_dev:5432/PET_REGISTER_DB -e SPRING_DATASOURCE_USERNAME=ALAINC00 -e SPRING_DATASOURCE_PASSWORD=ROOT1234 --network mascotaapi_petnet mascota-api-app
+
