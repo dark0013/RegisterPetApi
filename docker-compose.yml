@@ -2,21 +2,31 @@ version: '3.8'
 
 services:
   postgres:
-    image: postgres:15
     container_name: psql_petapi_dev
+    image: postgres:15
+    restart: always
     environment:
+      POSTGRES_DB: PET_REGISTER_DB
       POSTGRES_USER: ALAINC00
       POSTGRES_PASSWORD: ROOT1234
-      POSTGRES_DB: PET_REGISTER_DB
     ports:
-      - "5499:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - "5432:5432"
     networks:
       - petnet
 
-volumes:
-  postgres_data:
+  petapi_app:
+    container_name: petapi_app
+    image: eclipse-temurin:17-jdk
+    depends_on:
+      - postgres
+    command: ["java", "-jar", "/app/MascotaAPI-0.0.1-SNAPSHOT.jar", "--spring.profiles.active=docker"]
+    volumes:
+      - ./target/MascotaAPI-0.0.1-SNAPSHOT.jar:/app/MascotaAPI-0.0.1-SNAPSHOT.jar
+    ports:
+      - "9595:9595"
+    networks:
+      - petnet
 
 networks:
   petnet:
+    driver: bridge
